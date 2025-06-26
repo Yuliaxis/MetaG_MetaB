@@ -23,6 +23,7 @@ python /sylph-utils/sylph_to_taxprof.py -s results_profile.tsv -m sylph-utils/gt
 python sylph-utils/merge_sylph_taxprof.py *.sylphmpa --column relative_abundance -o Taxprofiles.tsv
 
 
+
 **1.2 Single sample assemblies**
 
 Individual sample assemblies was done with nf-core/mag 2.5.1 pipeline with Megahit v1.0.2. Binning was performed using MaxBin2 and MetaBAT2. The resulting bins were refined with the bin refinement module of metaWRAP and dereplicated with dRep v3.5.0. The parameters for the refinement module were set at a minimum completion of 70% (-c 70) and a maximum contamination of 10% (-x 10). 
@@ -51,6 +52,7 @@ nextflow run nf-core/mag -r 2.5.1 \
   --skip_clipping \
   --skip_binqc \
   --binning_map_mode own
+
 
   **2. MAGs Taxonomy and functional annotation**
   
