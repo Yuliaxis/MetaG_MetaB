@@ -66,6 +66,7 @@ gtdbtk classify_wf --genome_dir dereplicated_bins/ --out_dir MAGs_gtdbk.dir -x *
 2.2 MAGs functional annotation
 
 conda activate DRAM
+
 DRAM.py annotate -i '/MAGs2used/*.fa' -o dram_annotationt --threads 30
  
   
