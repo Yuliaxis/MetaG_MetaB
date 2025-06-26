@@ -21,9 +21,13 @@ sylph profile *.paired.sylsp gtdb-r220-c200-dbv1.syldb -t 30 -o results_profile.
 Individual sample assemblies was done with nf-core/mag 2.5.1 pipeline with Megahit v1.0.2. Binning was performed using MaxBin2 and MetaBAT2. The resulting bins were refined with the bin refinement module of metaWRAP and dereplicated with dRep v3.5.0. The parameters for the refinement module were set at a minimum completion of 70% (-c 70) and a maximum contamination of 10% (-x 10). 
 
 REF="/Database/Sscrofa11.1"
+
 OUTDIR="/MAGs"
+
 INPUT="samples_list.csv"
+
 MAX_CPUS=35
+
 
 nextflow run nf-core/mag -r 2.5.1 \
   --input "${INPUT}" \
