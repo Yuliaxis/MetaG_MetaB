@@ -6,9 +6,7 @@ Sixty Duroc pigs (30 immunocastrated males and 30 females) from the same genetic
 
 The nf-core/mag 2.5.1 pipeline (https://nf-co.re/mag/2.5.1/) was employed to perform quality control and host decontamination by removing reads that mapped against the porcine Susscrofa11.1 assembly genome. Then, the remaining reads were processed following complementary approaches: 
 
-**1.1 Taxonomic classification**
-
-sylph v0.8 against the GTDB-R220 database release 09-RS220, April 24th, 2024
+**1.1 Taxonomic classification with sylph v0.8 against the GTDB-R220 database release 09-RS220, April 24th, 2024**
 
 1.1.1 Sketch multiple samples
 
