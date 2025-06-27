@@ -68,6 +68,12 @@ gtdbtk classify_wf --genome_dir dereplicated_bins/ --out_dir MAGs_gtdbk.dir -x *
 conda activate DRAM
 
 DRAM.py annotate -i '/MAGs2used/*.fa' -o dram_annotationt --threads 30
+
+2.3 Microbial Genes Selection
+
+Scripts/Lasso_Selected_Microbial_Genes.R -> This script applies a LASSO (Least Absolute Shrinkage and Selection Operator) regression model to perform feature selection on microbial annotated genes data. The goal is to identify the most relevant microbial genes associated with the phenotype of interest after correcting for confounding effects (e.g., sex). The script includes data preprocessing, standardization, correction of the binary trait via logistic regression, model training with cross-validation, and extraction of selected features based on the optimal regularization parameter.
+
+
  
   
 
