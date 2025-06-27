@@ -26,7 +26,7 @@ python sylph-utils/merge_sylph_taxprof.py *.sylphmpa --column relative_abundance
 
 **1.2 Single sample assemblies**
 
-Individual sample assemblies was done with nf-core/mag 2.5.1 pipeline with Megahit v1.0.2. Binning was performed using MaxBin2 and MetaBAT2. The resulting bins were refined with the bin refinement module of metaWRAP and dereplicated with dRep v3.5.0. The parameters for the refinement module were set at a minimum completion of 70% (-c 70) and a maximum contamination of 10% (-x 10). 
+Individual sample assemblies were done with the nf-core/mag 2.5.1 pipeline with Megahit v1.0.2. Binning was performed using MaxBin2 and MetaBAT2. The resulting bins were refined with the bin refinement module of metaWRAP and dereplicated with dRep v3.5.0. The parameters for the refinement module were set at a minimum completion of 70% (-c 70) and a maximum contamination of 10% (-x 10). 
 
 REF="/Database/Sscrofa11.1"
 
@@ -56,7 +56,7 @@ nextflow run nf-core/mag -r 2.5.1 \
 
   **2. MAGs Taxonomy and functional annotation**
   
-  Taxonomy classification of MAGs was done using GTDB-Tk v2.4.0, and their functional annotation with DRAM against the PFAM-A, KOfam, and dbCAN-V10 databases. 
+  Taxonomy classification of MAGs was done using GTDB-Tk v2.4.0, and their functional annotation was performed with DRAM against the PFAM-A, KOfam, and dbCAN-V10 databases. 
 
 2.1 Taxonomy classification
 
@@ -73,7 +73,7 @@ DRAM.py annotate -i '/MAGs2used/*.fa' -o dram_annotationt --threads 30
 
 Scripts/Lasso_Selected_Microbial_Genes.R
 
-This script applies a LASSO (Least Absolute Shrinkage and Selection Operator) regression model to perform feature selection on microbial annotated genes data. The goal is to identify the most relevant microbial genes associated with the phenotype of interest after correcting for confounding effects (e.g., sex). The script includes data preprocessing, standardization, correction of the binary trait via logistic regression, model training with cross-validation, and extraction of selected features based on the optimal regularization parameter.
+This script applies a LASSO (Least Absolute Shrinkage and Selection Operator) regression model to perform feature selection on microbial annotated genes data. The goal is to identify the most relevant microbial genes associated with the phenotype of interest after correcting for confounding effects (e.g., sex). The script includes data preprocessing, standardization, adjustment for confounding factors on the binary trait via logistic regression, model training with cross-validation, and extraction of selected features based on the optimal regularization parameter.
 
 
  
