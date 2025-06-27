@@ -72,7 +72,7 @@ write.table(rownames(testing),"testing.txt",row.names=TRUE)
 library(glmnet)
 library(coefplot)
  
-
+# 1. cv.glmnet part
 # Extract the response variable (assumed to be in the first column)
 response<-training[,1]
 # Extract the predictor variables (all columns except the first)
