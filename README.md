@@ -54,13 +54,14 @@ nextflow run nf-core/mag -r 2.5.1 \
   --binning_map_mode own
 
 
-  **2. MAGs Taxonomy and functional annotation**
+  **2. MAGs Taxonomy and Functional annotation**
   
   Taxonomy classification of MAGs was done using GTDB-Tk v2.4.0, and their functional annotation was performed with DRAM against the PFAM-A, KOfam, and dbCAN-V10 databases. 
 
 2.1 Taxonomy classification
 
 conda activate GTDBTKv2.4.0
+
 gtdbtk classify_wf --genome_dir dereplicated_bins/ --out_dir MAGs_gtdbk.dir -x *.fa --cpus 30
 
 2.2 MAGs functional annotation
